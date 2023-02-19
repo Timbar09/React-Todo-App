@@ -1,4 +1,4 @@
-import './TodoApp.css';
+import '@/styles/TodoApp.css';
 import { useState } from 'react';
 import TodosHeader from '@/components/TodosHeader';
 import TodosLogic from '@/components/TodosLogic';
