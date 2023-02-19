@@ -7,12 +7,15 @@ const Form = () => {
     lname: '',
     message: '',
     carBrand: '',
+    isChecked: false,
   });
 
   const handleChange = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+
     setState((state) => ({
       ...state,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     }));
   };
 
@@ -46,12 +49,22 @@ const Form = () => {
             {carBrandOptions}
           </select>
         </label>
+        <label>
+          <input
+            type="checkbox"
+            name="isChecked"
+            checked={state.isChecked}
+            onChange={handleChange}
+          />
+          Is Checked?
+        </label>
       </form>
       <h5>
         My name is {state.fname} {state.lname}
       </h5>
-      <p>I would like to say, {state.message}</p>
+      <p>My message: {state.message}</p>
       <h5>Favorite car brand: {state.carBrand}</h5>
+      <h5>Is it checked? : {state.isChecked ? 'Yes' : 'No'}</h5>
     </>
   );
 };
