@@ -1,6 +1,6 @@
 import './TodoApp.css';
 import { useState } from 'react';
-import Header from '@/components/Header';
+import TodosHeader from '@/components/TodosHeader';
 import TodosLogic from '@/components/TodosLogic';
 
 function TodoApp() {
@@ -8,7 +8,7 @@ function TodoApp() {
 
   return (
     <>
-      <Header />
+      <TodosHeader />
       <TodosLogic />
     </>
   );

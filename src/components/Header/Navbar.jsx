@@ -7,7 +7,7 @@ const Navbar = () => {
   console.log(ref);
 
   return (
-    <nav>
+    <nav className="header_nav">
       <ul>
         <li>Home</li>
         <li>About</li>

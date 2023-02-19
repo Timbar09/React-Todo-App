@@ -1,12 +1,9 @@
-import Navbar from '@/components/Navbar';
-
-const Header = () => {
+const TodosHeader = () => {
   return (
     <header>
       <h1>todos</h1>
       <p>Items will persist in the browser local storage</p>
-      <Navbar />
     </header>
   );
 };
-export default Header;
+export default TodosHeader;
