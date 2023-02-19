@@ -8,6 +8,7 @@ const Form = () => {
     message: '',
     carBrand: '',
     isChecked: false,
+    gender: '',
   });
 
   const handleChange = (e) => {
@@ -58,13 +59,35 @@ const Form = () => {
           />
           Is Checked?
         </label>
+        <label>
+          <input
+            type="radio"
+            name="gender"
+            value="male"
+            checked={state.gender === 'male'}
+            onChange={handleChange}
+          />{' '}
+          Male
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            checked={state.gender === 'female'}
+            onChange={handleChange}
+          />{' '}
+          Female
+        </label>
       </form>
+
       <h5>
         My name is {state.fname} {state.lname}
       </h5>
       <p>My message: {state.message}</p>
       <h5>Favorite car brand: {state.carBrand}</h5>
       <h5>Is it checked? : {state.isChecked ? 'Yes' : 'No'}</h5>
+      <h5>Gender : {state.gender}</h5>
     </>
   );
 };
