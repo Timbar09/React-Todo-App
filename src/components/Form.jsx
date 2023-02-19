@@ -9,6 +9,7 @@ const Form = () => {
     carBrand: '',
     isChecked: false,
     gender: '',
+    price: 0,
   });
 
   const handleChange = (e) => {
@@ -79,6 +80,17 @@ const Form = () => {
           />{' '}
           Female
         </label>
+        <label>
+          Price (between 0 and 50):
+          <input
+            type="range"
+            name="price"
+            min="0"
+            max="50"
+            value={state.price}
+            onChange={handleChange}
+          />
+        </label>
       </form>
 
       <h5>
@@ -88,6 +100,7 @@ const Form = () => {
       <h5>Favorite car brand: {state.carBrand}</h5>
       <h5>Is it checked? : {state.isChecked ? 'Yes' : 'No'}</h5>
       <h5>Gender : {state.gender}</h5>
+      <h5>Price : ${state.price}</h5>
     </>
   );
 };
