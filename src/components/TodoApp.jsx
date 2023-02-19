@@ -1,16 +1,17 @@
 import '@/styles/TodoApp.css';
-import { useState } from 'react';
 import TodosHeader from '@/components/TodosHeader';
 import TodosLogic from '@/components/TodosLogic';
 
 function TodoApp() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <TodosHeader />
-      <TodosLogic />
-    </>
+    <section className="todos">
+      <div className="container">
+        <div className="todos-content">
+          <TodosHeader />
+          <TodosLogic />
+        </div>
+      </div>
+    </section>
   );
 }
 

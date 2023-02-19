@@ -1,4 +1,4 @@
-import './Header.css';
+import '@/styles/Header.css';
 import Navbar from '@/components/Header/Navbar';
 
 const Header = () => {

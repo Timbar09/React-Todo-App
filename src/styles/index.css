@@ -12,3 +12,23 @@ body {
   height: 100vh;
   font-weight: 400;
 }
+
+.container {
+  max-width: 85em;
+  margin: auto;
+}
+
+.container-pall {
+  padding: 1rem;
+}
+
+.container-px {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

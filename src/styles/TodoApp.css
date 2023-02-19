@@ -1,12 +1,46 @@
-#root {
-  max-width: 1280px;
+.todos-content {
+  max-width: 580px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.form {
+  display: flex;
+  border-radius: 10rem;
+  box-shadow: 0 4px 14px 0 rgba(70, 70, 70, 0.38);
+  justify-content: space-between;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.input-text {
+  width: 85%;
+  padding-right: 0.5rem;
+  border-radius: 10rem;
+  font-size: 1rem;
+}
+
+.input-text::placeholder {
+  color: #000;
+}
+
+.input-submit {
+  background: transparent;
+  color: #5b5b5b;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.input-text,
+.input-submit {
+  height: 45px;
+  outline: none;
+  border: none;
+}
+
+.submit-warning {
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+  display: block;
 }
