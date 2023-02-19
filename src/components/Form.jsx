@@ -12,6 +12,11 @@ const Form = () => {
     price: 0,
   });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
+
   const handleChange = (e) => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
@@ -31,7 +36,7 @@ const Form = () => {
   return (
     <>
       <h1>Controlled Form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           First Name: <input type="text" value={state.fname} onChange={handleChange} name="fname" />
         </label>
@@ -44,7 +49,7 @@ const Form = () => {
         </label>
         <label>
           Car Brand:
-          <select type="text" value={state.message} onChange={handleChange} name="message">
+          <select type="text" value={state.carBrand} onChange={handleChange} name="carBrand">
             <option value={''} disabled>
               --Pick a car brand--
             </option>
@@ -91,12 +96,13 @@ const Form = () => {
             onChange={handleChange}
           />
         </label>
+        <button>Submit</button>
       </form>
 
       <h5>
         My name is {state.fname} {state.lname}
       </h5>
-      <p>My message: {state.message}</p>
+      <p>{state.message}</p>
       <h5>Favorite car brand: {state.carBrand}</h5>
       <h5>Is it checked? : {state.isChecked ? 'Yes' : 'No'}</h5>
       <h5>Gender : {state.gender}</h5>
