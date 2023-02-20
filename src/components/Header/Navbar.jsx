@@ -7,8 +7,8 @@ const Navbar = () => {
   console.log(ref);
 
   return (
-    <nav className="header_nav">
-      <ul>
+    <nav>
+      <ul className="nav-links">
         <li>Home</li>
         <li>About</li>
         <li ref={ref}>
