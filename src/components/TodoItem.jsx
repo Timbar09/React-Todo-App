@@ -2,8 +2,10 @@ import styles from '@/styles/TodoItem.module.css';
 import { useState, useRef } from 'react';
 import { HiOutlineTrash } from 'react-icons/hi';
 import { BiEditAlt } from 'react-icons/bi';
+import { useTodosContext } from '@/context/TodosContext';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({ itemProp }) => {
+  const { handleChange, delTodo, setUpdate } = useTodosContext();
   const [editing, setEditing] = useState(false);
   const editInputRef = useRef(null);
 

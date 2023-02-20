@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { MdOutlineAddCircleOutline } from 'react-icons/Md';
+import { useTodosContext } from '@/context/TodosContext';
 
-const InputTodo = ({ addTodoItem }) => {
+const InputTodo = () => {
+  const { addTodoItem } = useTodosContext();
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
 
