@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { MdOutlineAddCircleOutline } from 'react-icons/Md';
+import { useTodosStore } from '@/store';
 
-const InputTodo = ({ addTodoItem }) => {
+const InputTodo = () => {
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
+
+  const addTodoItem = useTodosStore((state) => state.addTodoItem);
 
   const handleChange = (e) => {
     setTitle(e.target.value);

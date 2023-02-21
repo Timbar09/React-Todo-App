@@ -1,9 +1,15 @@
 import TodoItem from '@/components/TodoItem';
+import { useTodosStore } from '@/store';
 
-const TodosList = ({ todosProps, handleChange, delTodo, setUpdate }) => {
+const TodosList = () => {
+  const todos = useTodosStore((state) => state.todos);
+  const handleChange = useTodosStore((state) => state.handleChange);
+  const setUpdate = useTodosStore((state) => state.setUpdate);
+  const delTodo = useTodosStore((state) => state.delTodo);
+
   return (
     <ul>
-      {todosProps.map((todo) => (
+      {todos.map((todo) => (
         <TodoItem
           key={todo.id}
           itemProp={todo}

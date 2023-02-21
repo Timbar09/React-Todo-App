@@ -2,10 +2,15 @@ import styles from '@/styles/TodoItem.module.css';
 import { useState, useRef } from 'react';
 import { HiOutlineTrash } from 'react-icons/hi';
 import { BiEditAlt } from 'react-icons/bi';
+import { useTodosStore } from '@/store';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({ itemProp }) => {
   const [editing, setEditing] = useState(false);
   const editInputRef = useRef(null);
+
+  const handleChange = useTodosStore((state) => state.handleChange);
+  const delTodo = useTodosStore((state) => state.delTodo);
+  const setUpdate = useTodosStore((state) => state.setUpdate);
 
   const handleEditing = () => {
     setEditing(true);
@@ -14,7 +19,6 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   const completedStyle = {
     fontStyle: 'italic',
     color: '#595959',
-    opacity: 0.4,
     textDecoration: 'line-through',
   };
 
@@ -34,7 +38,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   };
 
   return (
-    <li className={styles.item}>
+    <li className={styles.item} style={itemProp.completed ? { opacity: 0.4 } : null}>
       <div className={styles.content} style={viewMode}>
         <input
           type="checkbox"
