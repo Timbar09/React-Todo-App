@@ -34,11 +34,7 @@ const InputTodo = () => {
           onChange={handleChange}
         />
         <button className="input-submit">
-          <MdOutlineAddCircleOutline
-            style={{
-              color: '#15d515bb',
-            }}
-          />
+          <MdOutlineAddCircleOutline />
         </button>
       </form>
       <span className="submit-warning">{message}</span>

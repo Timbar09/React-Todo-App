@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/Navbar.css';
 
 const links = [
   { path: '/', text: 'Home' },
@@ -9,11 +9,6 @@ const links = [
 ];
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false);
-
-  const ref = useRef();
-  console.log(ref);
-
   return (
     <nav>
       <ul className="nav-links">
@@ -29,18 +24,6 @@ const Navbar = () => {
             </li>
           );
         })}
-
-        <li key="services" ref={ref}>
-          <button onClick={() => setDropdown((prev) => !prev)}>
-            Services <span>&#8595;</span>
-          </button>
-          {dropdown && (
-            <ul>
-              <li>Design</li>
-              <li>Development</li>
-            </ul>
-          )}
-        </li>
       </ul>
     </nav>
   );

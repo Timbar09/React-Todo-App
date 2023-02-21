@@ -1,4 +1,10 @@
 const Profile = () => {
-  return <div>Profile page</div>;
+  return (
+    <div>
+      {' '}
+      <h1>Profile page.</h1>
+      <div className="about">Profile content</div>
+    </div>
+  );
 };
 export default Profile;

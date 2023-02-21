@@ -48,12 +48,8 @@ const TodoItem = ({ itemProp }) => {
         <button onClick={handleEditing}>
           <BiEditAlt />
         </button>
-        <button onClick={() => delTodo(itemProp.id)}>
-          <HiOutlineTrash
-            style={{
-              color: '#e311115f',
-            }}
-          />
+        <button className={styles.delete} onClick={() => delTodo(itemProp.id)}>
+          <HiOutlineTrash />
         </button>
         <span style={itemProp.completed ? completedStyle : null}>{itemProp.title}</span>
       </div>

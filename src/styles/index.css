@@ -32,6 +32,12 @@ ul {
   list-style: none;
 }
 
+a {
+  color: #aeadad;
+  text-decoration: none;
+}
+
 .page-active {
-  color: blue;
+  color: #000;
+  border-bottom: solid 2px currentColor;
 }
