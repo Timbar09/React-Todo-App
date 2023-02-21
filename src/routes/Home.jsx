@@ -4,12 +4,12 @@ import TodosLogic from '@/components/TodosLogic';
 
 const Home = () => {
   return (
-    // <div className="wrapper">
-    <div className="todos">
-      <TodosHeader />
-      <TodosLogic />
-    </div>
-    // </div>
+    <section className="todos">
+      <div className="container">
+        <TodosHeader />
+        <TodosLogic />
+      </div>
+    </section>
   );
 };
 export default Home;

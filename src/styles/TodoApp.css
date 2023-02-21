@@ -1,13 +1,9 @@
-.todos .container {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+.todos {
+  padding-top: 4rem;
 }
 
-.todos-content {
+.todos .container {
   max-width: 580px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .form {
