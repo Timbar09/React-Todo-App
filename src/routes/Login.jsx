@@ -9,20 +9,22 @@ const Login = () => {
     console.log(username);
   };
   return (
-    <div>
-      <h1>Login</h1>
-      <div className={styles.formWrapper}>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <button>Login</button>
-        </form>
+    <main>
+      <div className="container padding">
+        <h1 style={{ margin: '2rem 0' }}>Login.</h1>
+        <div className={styles.formWrapper}>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <button>Login</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default Login;

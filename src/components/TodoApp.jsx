@@ -13,12 +13,12 @@ const TodoApp = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />}>
+        <Route path="React-Todo-App/" element={<Home />} />
+        <Route path="React-Todo-App/about" element={<About />}>
           <Route path=":slug" element={<SinglePage />} />
         </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="React-Todo-App/login" element={<Login />} />
+        <Route path="React-Todo-App/profile" element={<Profile />} />
         <Route path="*" element={<NotMatch />} />
       </Route>
     </Routes>

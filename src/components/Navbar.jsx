@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const links = [
-  { path: '/', text: 'Home' },
-  { path: 'about', text: 'About' },
-  { path: 'profile', text: 'Profile' },
-  { path: 'login', text: 'Login' },
+  { path: 'React-Todo-App/', text: 'Home' },
+  { path: 'React-Todo-App/about', text: 'About' },
+  { path: 'React-Todo-App/profile', text: 'Profile' },
+  { path: 'React-Todo-App/login', text: 'Login' },
 ];
 
 const Navbar = () => {
