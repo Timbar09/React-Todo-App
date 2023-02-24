@@ -1,9 +1,11 @@
-const TodosLogic = () => {
-  return (
-    <div>
-      <h2>TodosLogic content</h2>
-      <input type="text" value="Submit" />
-    </div>
-  );
-};
+import InputTodo from './InputTodo';
+import TodosList from './TodosList';
+
+const TodosLogic = () => (
+  <div>
+    <InputTodo />
+    <TodosList />
+  </div>
+);
+
 export default TodosLogic;
