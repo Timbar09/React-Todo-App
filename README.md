@@ -21,6 +21,7 @@
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Author](#author)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -156,6 +157,8 @@ If you like this project, give it a ⭐️ and let me know what you like in part
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank the whole Microverse community for their help and contributions towards this project.
+
+I would also like to thank Ibadehin Majeed for the [tutorial](https://ibaslogic.com/react-tutorial-for-beginners/) of which this project is based on.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
