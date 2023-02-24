@@ -41,15 +41,15 @@
   align-items: center;
 }
 
-.input-text:focus + .input-submit {
-  color: #15d515bb;
-}
-
 .input-text,
 .input-submit {
   height: 45px;
   outline: none;
   border: none;
+}
+
+.input-text:focus + .input-submit {
+  color: #15d515bb;
 }
 
 .submit-warning {

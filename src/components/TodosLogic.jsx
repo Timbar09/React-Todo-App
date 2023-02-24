@@ -1,5 +1,5 @@
-import InputTodo from '@/components/InputTodo';
-import TodosList from '@/components/TodosList';
+import InputTodo from './InputTodo';
+import TodosList from './TodosList';
 
 const TodosLogic = () => (
   <div>

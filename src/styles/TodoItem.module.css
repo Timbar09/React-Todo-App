@@ -6,16 +6,19 @@
   background: #f5f5f5;
   border-radius: 10rem;
 }
+
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
+
 .content span {
   flex: 1;
   order: 1;
 }
+
 .content button {
   cursor: pointer;
   background: transparent;

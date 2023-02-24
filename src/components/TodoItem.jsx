@@ -1,8 +1,9 @@
-import styles from '@/styles/TodoItem.module.css';
 import { useState, useRef } from 'react';
 import { HiOutlineTrash } from 'react-icons/hi';
 import { BiEditAlt } from 'react-icons/bi';
-import { useTodosStore } from '@/store';
+import PropTypes from 'prop-types';
+import styles from '../styles/TodoItem.module.css';
+import { useTodosStore } from '../store';
 
 const TodoItem = ({ itemProp }) => {
   const [editing, setEditing] = useState(false);
@@ -22,8 +23,8 @@ const TodoItem = ({ itemProp }) => {
     textDecoration: 'line-through',
   };
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   if (editing) {
     viewMode.display = 'none';
   } else {
@@ -45,10 +46,10 @@ const TodoItem = ({ itemProp }) => {
           checked={itemProp.completed}
           onChange={() => handleChange(itemProp.id)}
         />
-        <button onClick={handleEditing}>
+        <button type="button" onClick={handleEditing}>
           <BiEditAlt />
         </button>
-        <button className={styles.delete} onClick={() => delTodo(itemProp.id)}>
+        <button type="button" className={styles.delete} onClick={() => delTodo(itemProp.id)}>
           <HiOutlineTrash />
         </button>
         <span style={itemProp.completed ? completedStyle : null}>{itemProp.title}</span>
@@ -63,6 +64,14 @@ const TodoItem = ({ itemProp }) => {
       />
     </li>
   );
+};
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
 export default TodoItem;

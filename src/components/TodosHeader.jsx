@@ -1,4 +1,4 @@
-import styles from '@/styles/TodosHeader.module.css';
+import styles from '../styles/TodosHeader.module.css';
 
 const TodosHeader = () => {
   const headerStyle = {

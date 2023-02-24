@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MdOutlineAddCircleOutline } from 'react-icons/Md';
-import { useTodosStore } from '@/store';
+import { useTodosStore } from '../store';
 
 const InputTodo = () => {
   const [title, setTitle] = useState('');
@@ -33,7 +33,7 @@ const InputTodo = () => {
           value={title}
           onChange={handleChange}
         />
-        <button className="input-submit">
+        <button type="submit" className="input-submit">
           <MdOutlineAddCircleOutline />
         </button>
       </form>

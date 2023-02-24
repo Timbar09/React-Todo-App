@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-param-reassign */
 import { create } from 'zustand';
 import { v4 as uuidv4 } from 'uuid';
 import { persist } from 'zustand/middleware';
@@ -7,7 +9,7 @@ const todosStore = (set) => ({
   addTodoItem: (title) => {
     const newTodo = {
       id: uuidv4(),
-      title: title,
+      title,
       completed: false,
     };
     set((state) => ({
@@ -16,9 +18,7 @@ const todosStore = (set) => ({
   },
   delTodo: (id) => {
     set((state) => ({
-      todos: state.todos.filter((todo) => {
-        return todo.id !== id;
-      }),
+      todos: state.todos.filter((todo) => todo.id !== id),
     }));
   },
   handleChange: (id) => {

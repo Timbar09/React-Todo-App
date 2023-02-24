@@ -8,25 +8,21 @@ const links = [
   { path: 'React-Todo-App/login', text: 'Login' },
 ];
 
-const Navbar = () => {
-  return (
-    <nav>
-      <ul className="nav-links">
-        {links.map((link) => {
-          return (
-            <li key={link.text}>
-              <NavLink
-                to={link.path}
-                className={({ isActive }) => (isActive ? 'page-active' : undefined)}
-              >
-                {link.text}
-              </NavLink>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <nav>
+    <ul className="nav-links">
+      {links.map((link) => (
+        <li key={link.text}>
+          <NavLink
+            to={link.path}
+            className={({ isActive }) => (isActive ? 'page-active' : undefined)}
+          >
+            {link.text}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
 
 export default Navbar;

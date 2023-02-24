@@ -1,5 +1,5 @@
-import TodoItem from '@/components/TodoItem';
-import { useTodosStore } from '@/store';
+import TodoItem from './TodoItem';
+import { useTodosStore } from '../store';
 
 const TodosList = () => {
   const todos = useTodosStore((state) => state.todos);

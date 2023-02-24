@@ -3,11 +3,13 @@ import styles from '@/styles/Login.module.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!username) return;
     console.log(username);
   };
+
   return (
     <main>
       <div className="container padding">
@@ -20,7 +22,7 @@ const Login = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <button>Login</button>
+            <button type="button">Login</button>
           </form>
         </div>
       </div>
